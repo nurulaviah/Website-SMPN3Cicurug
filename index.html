@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantsasri - Dashboard</title>
+
+    <!--Bootstrap Assets-->
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/icons-1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+
+    <!--CSS Component For Layouting-->
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/preloader.css">
+
+    <!--Styling Index-->
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="wrapperPreloader">
+        <div id="loader"></div>
+    </div>
+    <div id="app">
+        <div id="sidebarMain">
+            <div class="wrapperSidebar">
+                <div class="brandLogo">
+                    <img src="./assets/img/plantsasriLogo.png" alt="">
+                </div>
+                <a href="#" class="profile">
+                    <div class="imagesProfile">
+                        <img src="./assets/img/faces.jpeg" alt="">
+                    </div>
+                    <div class="profileUser">
+                        <h5 class="labelDay">Morning</h5>
+                        <h5 class="nameUser">Louis Milla</h5>
+                    </div>
+                </a>
+                <div class="sidebar-menu-wrapper">
+                    <li class="listMenuName">
+                        <p>Admin Menu</p>
+                    </li>
+                    <li class="list-menu active">
+                        <div class="icon">
+                            <ion-icon name="grid"></ion-icon>
+                        </div>
+                        <a href="index.html" class="sidebar-menu">My Dashboard</a>
+                    </li>
+                    <!-- <li class="list-menu">
+                        <div class="icon">
+                            <ion-icon name="repeat"></ion-icon>
+                        </div>
+                        <a href="request.html" class="sidebar-menu">Request</a>
+                    </li> -->
+                    <!-- <li class="list-menu">
+                        <div class="icon">
+                            <ion-icon name="documents"></ion-icon>
+                        </div>
+                        <a href="#" class="sidebar-menu">Document</a>
+                    </li> -->
+                    <!-- <li class="list-menu ">
+                        <div class="icon">
+                            <ion-icon name="people"></ion-icon>
+                        </div>
+                        <a href="#" class="sidebar-menu">Manage User</a>
+                    </li> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="headMain">
+                <div class="brand-section">
+                    <div class="iconBrand">
+                        <img src="./assets/img/plantsasriLogo.png" alt="">
+                    </div>
+                    <div class="sidebarButton">
+                        <img src="./assets/img/menuButton.svg" alt="" class="menuButton">
+                    </div>
+                </div>
+
+                <div class="user-action">
+                    <div class="dropdown notification">
+
+                        <button class="dropdown-toggle notification-toggle" type="button" id="notificationButton" data-bs-toggle="dropdown">
+                          <img src="./assets/img/notificationBell.svg" alt="">
+                        </button>
+
+                        <!-- <ul class="dropdown-menu notificationList" aria-labelledby="notificationButton">
+                          <li class="dropdown-item notification-item">
+                              <div class="icon">
+                                <ion-icon name="mail"></ion-icon>
+                              </div>
+                              <div class="wraperMessage">
+                                  <p class="label">Your Request Approved</p>
+                                  <p class="message">We are currently processing, please wait a moment.</p>
+                              </div>
+                              <p class="time">19.30</p>
+                          </li>
+                          <li class="dropdown-item notification-item">
+                            <div class="icon">
+                              <ion-icon name="mail"></ion-icon>
+                            </div>
+                            <div class="wraperMessage">
+                                <p class="label">Your Request Approved</p>
+                                <p class="message">We are currently processing, please wait a moment.</p>
+                            </div>
+                            <p class="time">19.30</p>
+                            </li>
+                        </ul> -->
+
+                        <div class="notificationNumber">
+                            <p class="numberAllNotification">10</p>
+                        </div>
+                    </div>
+                    <div class="logoutAction">
+                        <img src="./assets/img/powerIcon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="contentMain">
+                <h2 class="pageNameContent">Dashboard</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">SMPN 3 CICURUG</a></li>
+                    <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+
+                <!-- <div class="wrapper-statistic-card">
+                    <div class="statistic-card">
+                        <div class="icon-statistic-card">
+                            <img src="./assets/img/computermoney-icon.svg" alt="">
+                        </div>
+                        <div class="statistic-info">
+                            <h3 class="label-statistic">Total Income</h3>
+                            <h2 class="value-statistic">$ 1000,00</h2>
+                        </div>
+                    </div>
+
+                    <div class="statistic-card">
+                        <div class="icon-statistic-card">
+                            <img src="./assets/img/approvalDocument.svg" alt="">
+                        </div>
+                        <div class="statistic-info">
+                            <h3 class="label-statistic">Total Request</h3>
+                            <h2 class="value-statistic">$ 1000,00</h2>
+                        </div>
+                    </div>
+
+                    <div class="statistic-card">
+                        <div class="icon-statistic-card">
+                            <img src="./assets/img/destination-icon.svg" alt="">
+                        </div>
+                        <div class="statistic-info">
+                            <h3 class="label-statistic">Total Destination</h3>
+                            <h2 class="value-statistic">10</h2>
+                        </div>
+                    </div>
+
+                    <div class="statistic-card">
+                        <div class="icon-statistic-card">
+                            <img src="./assets/img/peopleIcon.svg" alt="">
+                        </div>
+                        <div class="statistic-info">
+                            <h3 class="label-statistic">Total User</h3>
+                            <h2 class="value-statistic">10K</h2>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <!-- <div class="row clearfix">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row clearfix">
+                                    <div class="col-lg-4 col-md-12 detail">
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                              <button class="nav-link active" id="nav-today-tab" data-bs-toggle="tab" data-bs-target="#nav-today" type="button" role="tab" aria-controls="nav-today" aria-selected="true">Today</button>
+                                              <button class="nav-link" id="nav-week-tab" data-bs-toggle="tab" data-bs-target="#nav-week" type="button" role="tab" aria-controls="nav-week" aria-selected="false">Week</button>
+                                              <button class="nav-link" id="nav-month-tab" data-bs-toggle="tab" data-bs-target="#nav-month" type="button" role="tab" aria-controls="nav-month" aria-selected="false">Month</button>
+                                            </div>
+                                          <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-today" role="tabpanel" aria-labelledby="nav-today-tab">
+                                                <div class="valueRequest">
+                                                    <h2>831</h2>
+                                                </div>
+                                                <p>Request Operating System</p>
+                                                <div class="wrapperProgres">
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-week" role="tabpanel" aria-labelledby="nav-week-tab">
+                                                <div class="valueRequest">
+                                                    <h2>831</h2>
+                                                </div>
+                                                <p>Request Operating System</p>
+                                                <div class="wrapperProgres">
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-month" role="tabpanel" aria-labelledby="nav-month-tab">
+                                                <div class="valueRequest">
+                                                    <h2>831</h2>
+                                                </div>
+                                                <p>Request Operating System</p>
+                                                <div class="wrapperProgres">
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="label">America
+                                                            <span class="valueNumber">77%</span>
+                                                        </label>
+                                                        <div class="progress" style="height: 2px;">
+                                                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-12 maps">
+                                        <div id="world-map-markers" class="v_locations jvector-map main-map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row statistic">
+                    <div class="col-12 mb-5 col-lg-8 mb-lg-0">
+                        <h3>Last Request</h3>
+                        <div class="wrapperTable table-responsive">
+                            <table id="lasRequest" class="tables" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kode Request</th>
+                                        <th>Recipient's Name</th>
+                                        <th>Country Destination </th>
+                                        <th>Recipient's Address</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="code">
+                                                <a href="plant-request-detail.html" class="numberCode">847643ajfayfafafb</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="detailName">
+                                                <p class="name">Mas Kulin</p>
+                                                <p class="phoneNumber">081290053372</p>
+                                            </div>
+                                        </td>
+                                        <td>Afrika Selatan</td>
+                                        <td>
+                                            <div class="address">
+                                                jl ciberemJl. Raya Tajur, Kp. Buntar...BuntarBuntarBuntarBuntarBuntarBuntarBuntarBuntarBuntarBuntar
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="status status-warning">
+                                                Progres (2)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3>Most Popular Plant</h3>
+                        <div class="wrapperChart">
+                            <canvas id="mostPopularPlant"></canvas>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!--Vendor-->
+        <!--Jquery-->
+        <script src="./assets/vendor/jquery/jquery.min.js"></script>
+        <script src="./assets/vendor/knob.bundle.js"></script>
+        <!--Bootstrap JS-->
+        <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!--Ion Icon-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./assets/vendor/jvectormap.bundle.js"></script>
+        <!--Datatable By Bootstrap-->
+        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+        <!--Chart Js-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        
+    <!--App JS-->
+    <script src="./assets/js/app.js"></script>
+
+    <script>
+        const labels = [
+          'Anggrek',
+          'Clarinervium',
+          'Amydrium',
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'My First dataset',
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255 , 99 ,0)',
+            'rgb(255 , 99 ,200)',
+
+            ],
+            borderColor: 'rgb(2555, 255, 255)',
+            data: [10, 10, 5],
+            
+          }]
+        };
+      
+        const config = {
+          type: 'pie',
+          data: data,
+          options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+            }
+          }
+        };
+
+        
+        const myChart = new Chart(
+            document.getElementById('mostPopularPlant'),
+            config
+        );
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#lasRequest').DataTable({
+                "info": false,
+                "bSort": false,
+            });
+        } );
+    </script>
+
+    <script>
+        $(function () {
+    if( $('#world-map-markers').length > 0 ){
+
+        $('#world-map-markers').vectorMap(
+        {
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            borderColor: '#fff',
+            borderOpacity: 0.25,
+            borderWidth: 0,
+            color: '#e6e6e6',
+            regionStyle : {
+                initial : {
+                fill : '#6c757d'
+                }
+            },
+            markerStyle: {
+                initial: {
+                    r: 5,
+                    'fill': '#fff',
+                    'fill-opacity':1,
+                    'stroke': '#000',
+                    'stroke-width' : 1,
+                    'stroke-opacity': 0.4
+                },
+            },
+        
+            markers : [{
+                latLng : [21.00, 78.00],
+                name : 'INDIA : 350'
+            
+            },
+                {
+                latLng : [-33.00, 151.00],
+                name : 'Australia : 250'
+                
+            },
+                {
+                latLng : [36.77, -119.41],
+                name : 'USA : 250'
+                
+            },
+                {
+                latLng : [55.37, -3.41],
+                name : 'UK   : 250'
+                
+            },
+                {
+                latLng : [25.20, 55.27],
+                name : 'UAE : 250'
+            
+            },
+                {
+                latLng : [35.65, 139.83],
+                name : 'JP : 37'
+            
+            },
+                {
+                latLng : [-23.53, -46.62],
+                name : 'BR : 162'
+            
+            },
+                {
+                latLng : [50.43, 30.51],
+                name : 'UA : 129'
+            
+            }],
+
+            series: {
+                regions: [{
+                    values: {
+                        "US": '#ffec94',
+                        "SA": '#ffaeae',
+                        "AU": '#64e2d4',
+                        "IN": '#b0e57c',
+                        "GB": '#b4d8e7',
+                        "JP": '#56baec',
+                        "BR": '#fe8282',
+                        "UA": '#e2ffcf',
+                    },
+                    attribute: 'fill'
+                }]
+            },
+
+            hoverOpacity: null,
+            normalizeFunction: 'linear',
+            zoomOnScroll: false,
+            scaleColors: ['#000000', '#000000'],
+            selectedColor: '#000000',
+            selectedRegions: [],
+            enableZoom: false,
+            hoverColor: '#fff',
+        });
+    }
+});
+    </script>
+    
+</body>
+</html>
